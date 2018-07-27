@@ -7,15 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D6AAEE94562FB4281BA4261 /* Pods_StudyBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F3E95C0299C305FAA95F209 /* Pods_StudyBuddy.framework */; };
+		F02719A621090FF70091AE66 /* post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02719A521090FF70091AE66 /* post.swift */; };
+		F02719A82109165A0091AE66 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02719A72109165A0091AE66 /* UserService.swift */; };
+		F02719AC210934F40091AE66 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02719AB210934F40091AE66 /* Constants.swift */; };
+		F02719BA21093A510091AE66 /* MyDemographicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02719B921093A510091AE66 /* MyDemographicsViewController.swift */; };
+		F02719BE210947040091AE66 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02719BD210947040091AE66 /* Storyboard+Utility.swift */; };
+		F02719C0210A33B60091AE66 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02719BF210A33B60091AE66 /* PostService.swift */; };
+		F02719C2210A3E900091AE66 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02719C1210A3E900091AE66 /* StorageService.swift */; };
+		F02719C4210A53060091AE66 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02719C3210A53060091AE66 /* FeedViewController.swift */; };
+		F02719C6210A77540091AE66 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02719C5210A77540091AE66 /* FeedTableViewCell.swift */; };
+		F02719CA210A7D9D0091AE66 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02719C9210A7D9D0091AE66 /* FeedTableViewController.swift */; };
+		F06C15C721079DD400DE310E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F06C15C621079DD400DE310E /* Login.storyboard */; };
+		F06C15C921079E5800DE310E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15C821079E5800DE310E /* LoginViewController.swift */; };
+		F06C15CB2107E47100DE310E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15CA2107E47100DE310E /* User.swift */; };
+		F06C15CD2107E9A600DE310E /* CreateUsername.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15CC2107E9A600DE310E /* CreateUsername.swift */; };
 		F090236821063B2500D45F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F090236721063B2500D45F2E /* AppDelegate.swift */; };
 		F090236A21063B2500D45F2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F090236921063B2500D45F2E /* ViewController.swift */; };
 		F090236D21063B2500D45F2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F090236B21063B2500D45F2E /* Main.storyboard */; };
 		F090237021063B2500D45F2E /* StudyBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F090236E21063B2500D45F2E /* StudyBuddy.xcdatamodeld */; };
 		F090237221063B2600D45F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F090237121063B2600D45F2E /* Assets.xcassets */; };
 		F090237521063B2600D45F2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F090237321063B2600D45F2E /* LaunchScreen.storyboard */; };
+		F0F212922107917E007A0659 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0F212912107917E007A0659 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F3E95C0299C305FAA95F209 /* Pods_StudyBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48C3D15E3309FFA3E5EAFBB7 /* Pods-StudyBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyBuddy/Pods-StudyBuddy.debug.xcconfig"; sourceTree = "<group>"; };
+		C013BAA9E72599464D29FC8D /* Pods-StudyBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudyBuddy/Pods-StudyBuddy.release.xcconfig"; sourceTree = "<group>"; };
+		F02719A521090FF70091AE66 /* post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = post.swift; sourceTree = "<group>"; };
+		F02719A72109165A0091AE66 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		F02719AB210934F40091AE66 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F02719B921093A510091AE66 /* MyDemographicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDemographicsViewController.swift; sourceTree = "<group>"; };
+		F02719BD210947040091AE66 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
+		F02719BF210A33B60091AE66 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		F02719C1210A3E900091AE66 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		F02719C3210A53060091AE66 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		F02719C5210A77540091AE66 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		F02719C9210A7D9D0091AE66 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		F06C15C621079DD400DE310E /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		F06C15C821079E5800DE310E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F06C15CA2107E47100DE310E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F06C15CC2107E9A600DE310E /* CreateUsername.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsername.swift; sourceTree = "<group>"; };
 		F090236421063B2500D45F2E /* StudyBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F090236721063B2500D45F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F090236921063B2500D45F2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +57,7 @@
 		F090237121063B2600D45F2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F090237421063B2600D45F2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F090237621063B2600D45F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0F212912107917E007A0659 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +65,112 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D6AAEE94562FB4281BA4261 /* Pods_StudyBuddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B278414E5B6B1EE0549DF1B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48C3D15E3309FFA3E5EAFBB7 /* Pods-StudyBuddy.debug.xcconfig */,
+				C013BAA9E72599464D29FC8D /* Pods-StudyBuddy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E988F7B6468F3A7A43B1D833 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F3E95C0299C305FAA95F209 /* Pods_StudyBuddy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F06C15BE21079A8500DE310E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F090236921063B2500D45F2E /* ViewController.swift */,
+				F06C15C821079E5800DE310E /* LoginViewController.swift */,
+				F06C15CC2107E9A600DE310E /* CreateUsername.swift */,
+				F02719B921093A510091AE66 /* MyDemographicsViewController.swift */,
+				F02719C3210A53060091AE66 /* FeedViewController.swift */,
+				F02719C9210A7D9D0091AE66 /* FeedTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F06C15BF21079AA300DE310E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F02719BD210947040091AE66 /* Storyboard+Utility.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F06C15C021079AAD00DE310E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F06C15C121079AB600DE310E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F06C15CA2107E47100DE310E /* User.swift */,
+				F02719A521090FF70091AE66 /* post.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F06C15C221079AC300DE310E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F02719A72109165A0091AE66 /* UserService.swift */,
+				F02719BF210A33B60091AE66 /* PostService.swift */,
+				F02719C1210A3E900091AE66 /* StorageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F06C15C321079ACD00DE310E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F090236B21063B2500D45F2E /* Main.storyboard */,
+				F090237321063B2600D45F2E /* LaunchScreen.storyboard */,
+				F06C15C621079DD400DE310E /* Login.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F06C15C421079AD400DE310E /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				F0F212912107917E007A0659 /* GoogleService-Info.plist */,
+				F090237621063B2600D45F2E /* Info.plist */,
+				F02719AB210934F40091AE66 /* Constants.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		F06C15C521079ADB00DE310E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F02719C5210A77540091AE66 /* FeedTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F090235B21063B2500D45F2E = {
 			isa = PBXGroup;
 			children = (
 				F090236621063B2500D45F2E /* StudyBuddy */,
 				F090236521063B2500D45F2E /* Products */,
+				B278414E5B6B1EE0549DF1B2 /* Pods */,
+				E988F7B6468F3A7A43B1D833 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,11 +186,15 @@
 			isa = PBXGroup;
 			children = (
 				F090236721063B2500D45F2E /* AppDelegate.swift */,
-				F090236921063B2500D45F2E /* ViewController.swift */,
-				F090236B21063B2500D45F2E /* Main.storyboard */,
+				F06C15C221079AC300DE310E /* Services */,
+				F06C15C121079AB600DE310E /* Models */,
+				F06C15BE21079A8500DE310E /* Controllers */,
+				F06C15C521079ADB00DE310E /* Views */,
+				F06C15C021079AAD00DE310E /* Helpers */,
+				F06C15C321079ACD00DE310E /* Storyboards */,
 				F090237121063B2600D45F2E /* Assets.xcassets */,
-				F090237321063B2600D45F2E /* LaunchScreen.storyboard */,
-				F090237621063B2600D45F2E /* Info.plist */,
+				F06C15BF21079AA300DE310E /* Extensions */,
+				F06C15C421079AD400DE310E /* Supporting */,
 				F090236E21063B2500D45F2E /* StudyBuddy.xcdatamodeld */,
 			);
 			path = StudyBuddy;
@@ -74,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F090237921063B2600D45F2E /* Build configuration list for PBXNativeTarget "StudyBuddy" */;
 			buildPhases = (
+				C8689C4D1F1C0BAE84ACD992 /* [CP] Check Pods Manifest.lock */,
 				F090236021063B2500D45F2E /* Sources */,
 				F090236121063B2500D45F2E /* Frameworks */,
 				F090236221063B2500D45F2E /* Resources */,
+				D1EE4DEC4A04FA2203BB0F1A /* [CP] Embed Pods Frameworks */,
+				35517030CA253E09DA6A4098 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,21 +262,99 @@
 			buildActionMask = 2147483647;
 			files = (
 				F090237521063B2600D45F2E /* LaunchScreen.storyboard in Resources */,
+				F0F212922107917E007A0659 /* GoogleService-Info.plist in Resources */,
 				F090237221063B2600D45F2E /* Assets.xcassets in Resources */,
+				F06C15C721079DD400DE310E /* Login.storyboard in Resources */,
 				F090236D21063B2500D45F2E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		35517030CA253E09DA6A4098 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-StudyBuddy/Pods-StudyBuddy-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StudyBuddy/Pods-StudyBuddy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8689C4D1F1C0BAE84ACD992 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StudyBuddy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1EE4DEC4A04FA2203BB0F1A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-StudyBuddy/Pods-StudyBuddy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StudyBuddy/Pods-StudyBuddy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F090236021063B2500D45F2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06C15C921079E5800DE310E /* LoginViewController.swift in Sources */,
 				F090236A21063B2500D45F2E /* ViewController.swift in Sources */,
 				F090236821063B2500D45F2E /* AppDelegate.swift in Sources */,
+				F02719CA210A7D9D0091AE66 /* FeedTableViewController.swift in Sources */,
+				F02719BE210947040091AE66 /* Storyboard+Utility.swift in Sources */,
+				F02719A621090FF70091AE66 /* post.swift in Sources */,
+				F02719AC210934F40091AE66 /* Constants.swift in Sources */,
+				F02719A82109165A0091AE66 /* UserService.swift in Sources */,
+				F02719BA21093A510091AE66 /* MyDemographicsViewController.swift in Sources */,
+				F02719C4210A53060091AE66 /* FeedViewController.swift in Sources */,
+				F06C15CD2107E9A600DE310E /* CreateUsername.swift in Sources */,
+				F02719C0210A33B60091AE66 /* PostService.swift in Sources */,
+				F06C15CB2107E47100DE310E /* User.swift in Sources */,
+				F02719C6210A77540091AE66 /* FeedTableViewCell.swift in Sources */,
 				F090237021063B2500D45F2E /* StudyBuddy.xcdatamodeld in Sources */,
+				F02719C2210A3E900091AE66 /* StorageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,11 +496,12 @@
 		};
 		F090237A21063B2600D45F2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48C3D15E3309FFA3E5EAFBB7 /* Pods-StudyBuddy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U28V5FZJF7;
-				INFOPLIST_FILE = StudyBuddy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/StudyBuddy/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +515,12 @@
 		};
 		F090237B21063B2600D45F2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C013BAA9E72599464D29FC8D /* Pods-StudyBuddy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U28V5FZJF7;
-				INFOPLIST_FILE = StudyBuddy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/StudyBuddy/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
