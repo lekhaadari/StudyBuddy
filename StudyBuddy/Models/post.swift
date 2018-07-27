@@ -19,21 +19,24 @@ class Post {
     let classNum: String
     let duration: String
     let userID: String
+    let userName: String
     var postID: String?
     
     
-    init(subject: String, classNum: String, duration: String, userID: String) {
+    init(subject: String, classNum: String, duration: String, userID: String, userName: String) {
         self.subject = subject
         self.classNum = classNum
         self.duration = duration
         self.userID = userID
+        self.userName = userName
     }
     
     var dictValue: [String : Any] {
         return ["subject" : subject,
                 "classNum" : classNum,
                 "duration" : duration,
-            "userID": userID]
+                "userID": userID,
+                "userName": userName]
     }
 
     init?(snapshot: DataSnapshot) {
@@ -41,7 +44,8 @@ class Post {
             let subject = dict["subject"] as? String,
             let classNum = dict["classNum"] as? String,
             let duration = dict["duration"] as? String,
-            let userID = dict["userID"] as? String
+            let userID = dict["userID"] as? String,
+            let userName = dict["userName"] as? String
             else {return nil}
         
        
@@ -49,6 +53,7 @@ class Post {
         self.classNum = classNum
         self.duration = duration
         self.userID = userID
+        self.userName = userName
         
     }
 }

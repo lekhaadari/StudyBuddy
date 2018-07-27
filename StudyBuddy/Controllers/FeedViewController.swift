@@ -72,7 +72,7 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
             
             let post = posts[indexPath.row]
             
-            cell.usernameButton.setTitle(post.userID, for: .normal)
+            cell.usernameButton.setTitle(post.userName, for: .normal)
     //        cell.usernameLabel.text = post.userID
             cell.subjectLabel.text = post.subject
             cell.classNumLabel.text = post.classNum

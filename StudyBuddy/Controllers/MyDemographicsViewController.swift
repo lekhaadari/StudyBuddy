@@ -44,15 +44,19 @@ class MyDemographicsViewController : UIViewController {
 
     @IBAction func doneButtonTapped(_ sender: Any) {
         let user = User.current
-        let post = Post(subject: subjectTextField.text!, classNum: classTextField.text!, duration: durationTextField.text!, userID: user.uid)
+        let post = Post(subject: subjectTextField.text!, classNum: classTextField.text!, duration: durationTextField.text!, userID: user.uid, userName: user.username)
         
         PostService.create(for: post) { (completedPost) in
             print(completedPost)
             
         }
         
+        subjectTextField.text = ""
+        classTextField.text = ""
+        durationTextField.text = ""
 //        self.performSegue(withIdentifier: "toFeedFromDone", sender: self)
         tabBarController?.selectedIndex = 1
+        
     }
     
 
