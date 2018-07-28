@@ -149,7 +149,6 @@
         <!--Messages-->
         <scene sceneID="Hfb-Yp-c0c">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TlW-wh-oET" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Uno-zl-kkr" customClass="ChatListViewController" customModule="StudyBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WRD-7x-FOb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -217,9 +216,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Messages" id="2B8-Si-86w"/>
                     <connections>
-                        <outlet property="chatTableViewOutlet" destination="YPQ-vZ-ygP" id="MF5-aa-QZr"/>
+                        <outlet property="tableView" destination="YPQ-vZ-ygP" id="LB1-1d-196"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TlW-wh-oET" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-610" y="1938"/>
         </scene>
