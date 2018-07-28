@@ -21,7 +21,7 @@ class ChatListViewController: UIViewController {
 //    
     override func viewDidLoad() {
         super.viewDidLoad()
-//
+        
 //        // Do any additional setup after loading the view.
 //        tableView.rowHeight = 71
 //        // remove separators for empty cells
@@ -60,18 +60,21 @@ class ChatListViewController: UIViewController {
 //
 //}
 //
-//extension ChatListViewController: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+}
+extension ChatListViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
 //        return chats.count
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatListCell") as! ChatListCell
-//        
+    }
+//
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "chatListCell") as! ChatListCell
+//
 //        let chat = chats[indexPath.row]
 //        cell.titleLabel.text = chat.title
 //        cell.lastMessageLabel.text = chat.lastMessage
-//        
-//        return cell
-//    }
+//
+      return cell
+    
+}
 }

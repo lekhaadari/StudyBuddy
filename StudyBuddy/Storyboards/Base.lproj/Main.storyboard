@@ -158,7 +158,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chatListCell" rowHeight="100" id="m9b-Wd-MjG" customClass="ChatTableViewCell" customModule="StudyBuddy" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chatListCell" rowHeight="100" id="m9b-Wd-MjG" customClass="ChatListCell" customModule="StudyBuddy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m9b-Wd-MjG" id="kHG-6u-NIe">
@@ -194,14 +194,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="lastMessageLabel" destination="s75-f7-eA3" id="0gW-y7-35t"/>
-                                            <outlet property="titleLabel" destination="uhE-Jx-9W7" id="6Cp-dA-NCI"/>
+                                            <outlet property="lastMessageLabel" destination="s75-f7-eA3" id="qss-Ga-vaz"/>
+                                            <outlet property="titleLabel" destination="uhE-Jx-9W7" id="Nky-PM-YYK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="WRD-7x-FOb" id="CgZ-Zj-Dxl"/>
-                                    <outlet property="delegate" destination="WRD-7x-FOb" id="COp-8J-Vuh"/>
+                                    <outlet property="dataSource" destination="Uno-zl-kkr" id="0o0-Bi-Z3D"/>
+                                    <outlet property="delegate" destination="Uno-zl-kkr" id="Vfn-qc-W6Y"/>
                                 </connections>
                             </tableView>
                         </subviews>
