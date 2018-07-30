@@ -46,6 +46,7 @@ class ChatListViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 //
 //
 //    /*
@@ -61,7 +62,7 @@ class ChatListViewController: UIViewController {
 //}
 //
 }
-extension ChatListViewController: UITableViewDataSource, UITableViewDelegate {
+extension ChatListViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return 1
         return chats.count
@@ -77,4 +78,25 @@ extension ChatListViewController: UITableViewDataSource, UITableViewDelegate {
       return cell
     
 }
+}
+
+extension ChatListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "chat", sender: self)
+    }
+}
+
+// MARK: - Navigation
+
+extension ChatListViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if segue.identifier == "chat",
+            let destination = segue.destination as? ChatViewController,
+            let indexPath = tableView.indexPathForSelectedRow {
+            
+            destination.chat = chats[indexPath.row]
+        }
+    }
 }

@@ -11,7 +11,7 @@ import UIKit
 class FeedViewController: UIViewController {
 
     // MARK: - Properties
-    
+    var existingChat: Chat?
     var posts = [Post](){
         didSet{
             DispatchQueue.main.async {
@@ -108,9 +108,12 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         
         DispatchQueue.global().async {
             UserService.show(forUID: post.userID, completion: { (user) in
-                DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "chat", sender: user)
-                }
+                ChatService.checkForExistingChat(with: user!, completion: { (chat) in
+                    DispatchQueue.main.async {
+                        self.existingChat = chat
+                        self.performSegue(withIdentifier: "chat", sender: user)
+                    }
+                })
             })
         }
     }
@@ -119,11 +122,32 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         return posts.count
     }
     
+//    guard let selectedUser = selectedUser else { return }
+//
+//    // 2
+//    sender.isEnabled = false
+//    // 3
+//    ChatService.checkForExistingChat(with: selectedUser) { (chat) in
+//    // 4
+//    sender.isEnabled = true
+//    self.existingChat = chat
+//
+//    self.performSegue(withIdentifier: "toChat", sender: self)
+//    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "chat"{
         let chatVC = segue.destination as! ChatViewController
         let user = sender as! User
         chatVC.secondUser = user
+            
+        //check this code pls
+             let members = [User.current, user]
+        chatVC.chat = self.existingChat ?? Chat(members: members)
+            // ALSO CHECK THIS CODE PLS
+       
+        
         }
         
     }

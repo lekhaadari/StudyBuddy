@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseDatabase.FIRDataSnapshot
+import JSQMessagesViewController.JSQMessage
 
 class Message {
     
@@ -47,5 +48,11 @@ class Message {
         self.sender = User.current
     }
     
+    lazy var jsqMessageValue: JSQMessage = {
+        return JSQMessage(senderId: self.sender.uid,
+                          senderDisplayName: self.sender.username,
+                          date: self.timestamp,
+                          text: self.content)
+    }()
 
 }
