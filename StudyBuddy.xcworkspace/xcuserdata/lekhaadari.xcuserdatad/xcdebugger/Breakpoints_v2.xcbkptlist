@@ -11,6 +11,7 @@
             continueAfterRunningActions = "No"
             filePath = "StudyBuddy/Controllers/FeedViewController.swift"
             timestampString = "554686619.9345"
+            timestampString = "554687054.2832251"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "105"
@@ -27,6 +28,7 @@
             continueAfterRunningActions = "No"
             filePath = "StudyBuddy/Controllers/FeedViewController.swift"
             timestampString = "554686619.9346859"
+            timestampString = "554687054.283379"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
@@ -75,6 +77,7 @@
             continueAfterRunningActions = "No"
             filePath = "StudyBuddy/Controllers/FeedViewController.swift"
             timestampString = "554686619.934822"
+            timestampString = "554687054.283501"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "110"
@@ -123,6 +126,7 @@
             continueAfterRunningActions = "No"
             filePath = "StudyBuddy/Controllers/FeedViewController.swift"
             timestampString = "554686619.934903"
+            timestampString = "554687054.2836159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
@@ -139,6 +143,7 @@
             continueAfterRunningActions = "No"
             filePath = "StudyBuddy/Controllers/FeedViewController.swift"
             timestampString = "554686619.934967"
+            timestampString = "554687054.283711"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "108"
@@ -155,6 +160,7 @@
             continueAfterRunningActions = "No"
             filePath = "StudyBuddy/Controllers/FeedViewController.swift"
             timestampString = "554686619.9350311"
+            timestampString = "554687054.283812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "97"
@@ -171,6 +177,7 @@
             continueAfterRunningActions = "No"
             filePath = "StudyBuddy/Controllers/FeedViewController.swift"
             timestampString = "554686619.935092"
+            timestampString = "554687054.283908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
@@ -187,6 +194,7 @@
             continueAfterRunningActions = "No"
             filePath = "StudyBuddy/Controllers/FeedViewController.swift"
             timestampString = "554686619.935153"
+            timestampString = "554687054.284013"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "151"
@@ -199,10 +207,12 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyBuddy/Controllers/ChatViewController.swift"
             timestampString = "554686619.935205"
+            timestampString = "554687054.284104"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"
@@ -215,10 +225,12 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyBuddy/Controllers/ChatViewController.swift"
             timestampString = "554686619.93581"
+            timestampString = "554687054.284187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -231,10 +243,12 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyBuddy/Controllers/ChatViewController.swift"
             timestampString = "554686619.936269"
+            timestampString = "554687054.2842619"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
@@ -246,11 +260,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyBuddy/Controllers/ChatViewController.swift"
             timestampString = "554686619.936535"
+            timestampString = "554687054.284359"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
@@ -263,10 +277,12 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyBuddy/Controllers/ChatViewController.swift"
             timestampString = "554686619.936916"
+            timestampString = "554687054.284447"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
@@ -279,10 +295,12 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyBuddy/Controllers/ChatViewController.swift"
             timestampString = "554686619.937587"
+            timestampString = "554687054.284518"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
@@ -295,10 +313,12 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyBuddy/Controllers/ChatViewController.swift"
             timestampString = "554686619.938323"
+            timestampString = "554687054.284584"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
@@ -311,10 +331,12 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyBuddy/Controllers/ChatViewController.swift"
             timestampString = "554686619.938589"
+            timestampString = "554687054.284649"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
