@@ -22,11 +22,11 @@
 		F06C15C921079E5800DE310E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15C821079E5800DE310E /* LoginViewController.swift */; };
 		F06C15CB2107E47100DE310E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15CA2107E47100DE310E /* User.swift */; };
 		F06C15CD2107E9A600DE310E /* CreateUsername.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15CC2107E9A600DE310E /* CreateUsername.swift */; };
+		F07C4D1E210F7B22008DE4F0 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07C4D1D210F7B22008DE4F0 /* ChatViewController.swift */; };
 		F0880DA9210B85CF002E6927 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0880DA8210B85CF002E6927 /* Chat.swift */; };
 		F0880DAB210B869F002E6927 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0880DAA210B869F002E6927 /* Messages.swift */; };
 		F0880DAD210B88CF002E6927 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0880DAC210B88CF002E6927 /* ChatService.swift */; };
 		F0880DB2210BB412002E6927 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0880DB1210BB412002E6927 /* ChatListViewController.swift */; };
-		F0880DB4210BB433002E6927 /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0880DB3210BB433002E6927 /* NewChatViewController.swift */; };
 		F0880DB6210BB5FE002E6927 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0880DB5210BB5FE002E6927 /* ChatTableViewCell.swift */; };
 		F090236821063B2500D45F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F090236721063B2500D45F2E /* AppDelegate.swift */; };
 		F090236A21063B2500D45F2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F090236921063B2500D45F2E /* ViewController.swift */; };
@@ -55,11 +55,11 @@
 		F06C15C821079E5800DE310E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F06C15CA2107E47100DE310E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F06C15CC2107E9A600DE310E /* CreateUsername.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsername.swift; sourceTree = "<group>"; };
+		F07C4D1D210F7B22008DE4F0 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F0880DA8210B85CF002E6927 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		F0880DAA210B869F002E6927 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		F0880DAC210B88CF002E6927 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		F0880DB1210BB412002E6927 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
-		F0880DB3210BB433002E6927 /* NewChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
 		F0880DB5210BB5FE002E6927 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		F090236421063B2500D45F2E /* StudyBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F090236721063B2500D45F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 				F02719C3210A53060091AE66 /* FeedViewController.swift */,
 				F02719C9210A7D9D0091AE66 /* FeedTableViewController.swift */,
 				F0880DB1210BB412002E6927 /* ChatListViewController.swift */,
-				F0880DB3210BB433002E6927 /* NewChatViewController.swift */,
+				F07C4D1D210F7B22008DE4F0 /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -335,6 +335,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-StudyBuddy/Pods-StudyBuddy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -342,6 +344,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -359,13 +363,13 @@
 			files = (
 				F06C15C921079E5800DE310E /* LoginViewController.swift in Sources */,
 				F0880DAB210B869F002E6927 /* Messages.swift in Sources */,
+				F07C4D1E210F7B22008DE4F0 /* ChatViewController.swift in Sources */,
 				F090236A21063B2500D45F2E /* ViewController.swift in Sources */,
 				F0880DA9210B85CF002E6927 /* Chat.swift in Sources */,
 				F090236821063B2500D45F2E /* AppDelegate.swift in Sources */,
 				F0880DB6210BB5FE002E6927 /* ChatTableViewCell.swift in Sources */,
 				F02719CA210A7D9D0091AE66 /* FeedTableViewController.swift in Sources */,
 				F0880DAD210B88CF002E6927 /* ChatService.swift in Sources */,
-				F0880DB4210BB433002E6927 /* NewChatViewController.swift in Sources */,
 				F02719BE210947040091AE66 /* Storyboard+Utility.swift in Sources */,
 				F02719A621090FF70091AE66 /* post.swift in Sources */,
 				F02719AC210934F40091AE66 /* Constants.swift in Sources */,

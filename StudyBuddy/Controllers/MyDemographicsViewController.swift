@@ -44,7 +44,8 @@ class MyDemographicsViewController : UIViewController {
 
     @IBAction func doneButtonTapped(_ sender: Any) {
         let user = User.current
-        let post = Post(subject: subjectTextField.text!, classNum: classTextField.text!, duration: durationTextField.text!, userID: user.uid, userName: user.username)
+//        let post = Post(subject: subjectTextField.text!, classNum: classTextField.text!, duration: durationTextField.text!, userID: user.uid, userName: user.username)
+        let post = Post(subject: subjectTextField.text!, classNum: classTextField.text!, duration: durationTextField.text!, user: user)
         
         PostService.create(for: post) { (completedPost) in
             print(completedPost)

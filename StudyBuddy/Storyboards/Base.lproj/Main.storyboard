@@ -38,9 +38,6 @@
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heP-ui-oTj">
                                                                     <rect key="frame" x="0.0" y="0.0" width="131.5" height="30"/>
                                                                     <state key="normal" title="Username"/>
-                                                                    <connections>
-                                                                        <action selector="usernameButtonTapped:" destination="QBa-G3-Mwb" eventType="touchUpInside" id="Z0Y-Ku-7Pp"/>
-                                                                    </connections>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is studying" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zl-hm-bWl">
                                                                     <rect key="frame" x="132.5" y="7" width="66" height="16"/>
@@ -101,7 +98,7 @@
                                             <outlet property="classNumLabel" destination="LTG-ed-KNv" id="1nw-6P-gZv"/>
                                             <outlet property="durationLabel" destination="ZM1-Rs-DPk" id="I2Q-Lv-EFU"/>
                                             <outlet property="subjectLabel" destination="GJd-cV-L4t" id="iFE-3Z-SF4"/>
-                                            <outlet property="usernameButton" destination="heP-ui-oTj" id="wGX-FD-Y25"/>
+                                            <outlet property="usernameButton" destination="heP-ui-oTj" id="s66-6t-d3J"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -125,16 +122,17 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="6jP-zY-jo1" id="O9F-TG-sAm"/>
+                        <segue destination="lUT-jD-iHG" kind="show" identifier="chat" id="ddg-3O-9VI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kB7-Ua-HZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="519" y="1101"/>
         </scene>
-        <!--New Chat View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="IuH-yX-hBQ">
             <objects>
-                <viewController id="lUT-jD-iHG" customClass="NewChatViewController" customModule="StudyBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lUT-jD-iHG" customClass="ChatViewController" customModule="StudyBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zxn-ab-83E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,8 +198,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="Uno-zl-kkr" id="0o0-Bi-Z3D"/>
-                                    <outlet property="delegate" destination="Uno-zl-kkr" id="Vfn-qc-W6Y"/>
+                                    <outlet property="dataSource" destination="Uno-zl-kkr" id="iWW-MS-4S0"/>
+                                    <outlet property="delegate" destination="Uno-zl-kkr" id="GQZ-Xb-8Gi"/>
                                 </connections>
                             </tableView>
                         </subviews>
