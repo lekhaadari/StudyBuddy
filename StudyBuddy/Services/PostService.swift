@@ -15,7 +15,7 @@ struct PostService {
     static func create(for post: Post, completion: @escaping (Post?)-> Void) {
     let postRef = Database.database().reference().child("posts").childByAutoId()
     
-    let postAttr = ["subject": post.subject, "classNum": post.classNum, "duration": post.duration, "userID": post.userID] as [String : Any]
+        let postAttr = ["subject": post.subject, "classNum": post.classNum, "duration": post.duration, "userID": User.current.uid , "username": User.current.username] as [String : Any]
    
     postRef.setValue(postAttr) { (error, ref) in
         if let error = error {
@@ -38,9 +38,12 @@ struct PostService {
           var posts = [Post]()
             
             for dbPost in snapshot.children{
-                let post = Post(snapshot: dbPost as! DataSnapshot)
+                print(dbPost)
+                guard let post = Post(snapshot: dbPost as! DataSnapshot)  else {
+                    return assertionFailure("Failed to get posts from Firebase")
+                }
     //            posts.append(post!)
-                posts.insert(post!, at: 0)
+                posts.insert(post, at: 0)
             }
             completion(posts)
         }

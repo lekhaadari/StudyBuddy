@@ -11,7 +11,7 @@ import UIKit
 class FeedViewController: UIViewController {
 
     // MARK: - Properties
-    
+    var existingChat: Chat?
     var posts = [Post](){
         didSet{
             DispatchQueue.main.async {
@@ -36,6 +36,8 @@ class FeedViewController: UIViewController {
 //        tableView.dataSource = self 
         // Do any additional setup after loading the view.
         
+        // Check for UID, if UID == userdefaults UID
+        // Don't show that user, or pop that user from the array of users
         PostService.show { (allPosts) in
             print(allPosts?.count)
             print("All Posts From Firebase: \(allPosts)")
@@ -62,6 +64,15 @@ class FeedViewController: UIViewController {
         // call show post
     }
 
+    
+// // NEW - CHECK THIS - USERNAME BUTTON
+//    @IBAction func usernameButton(_ sender: Any) {
+//        var chatMembers = [User]()
+//        chatMembers.append(User.current)
+//        //append selected user
+//        let chatHash = Chat.hash(forMembers: chatMembers)
+//    }
+    
 }
 
 extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
@@ -72,7 +83,15 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
             
             let post = posts[indexPath.row]
             
-            cell.usernameButton.setTitle(post.userID, for: .normal)
+            DispatchQueue.global().async {
+                UserService.show(forUID: post.userID, completion: { (user) in
+                    DispatchQueue.main.async {
+                        //cell.usernameButton.titleLabel?.text = user?.username
+                        cell.usernameButton.setTitle(user?.username, for: .normal)
+                    }
+                })
+            }
+           
     //        cell.usernameLabel.text = post.userID
             cell.subjectLabel.text = post.subject
             cell.classNumLabel.text = post.classNum
@@ -83,8 +102,54 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let post = posts[indexPath.row]
+        
+        
+        DispatchQueue.global().async {
+            UserService.show(forUID: post.userID, completion: { (user) in
+                ChatService.checkForExistingChat(with: user!, completion: { (chat) in
+                    DispatchQueue.main.async {
+                        self.existingChat = chat
+                        self.performSegue(withIdentifier: "chat", sender: user)
+                    }
+                })
+            })
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
+    }
+    
+//    guard let selectedUser = selectedUser else { return }
+//
+//    // 2
+//    sender.isEnabled = false
+//    // 3
+//    ChatService.checkForExistingChat(with: selectedUser) { (chat) in
+//    // 4
+//    sender.isEnabled = true
+//    self.existingChat = chat
+//
+//    self.performSegue(withIdentifier: "toChat", sender: self)
+//    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "chat"{
+        let chatVC = segue.destination as! ChatViewController
+        let user = sender as! User
+        chatVC.secondUser = user
+            
+        //check this code pls
+             let members = [User.current, user]
+        chatVC.chat = self.existingChat ?? Chat(members: members)
+            // ALSO CHECK THIS CODE PLS
+       
+        
+        }
+        
     }
 }
 

@@ -62,11 +62,21 @@
 		</dict>
 		<key>JSQMessagesViewController.xcscheme</key>
 		<dict>
+<<<<<<< HEAD
+=======
+			<key>isShown</key>
+			<false/>
+>>>>>>> weird
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
 		<key>JSQSystemSoundPlayer.xcscheme</key>
 		<dict>
+<<<<<<< HEAD
+=======
+			<key>isShown</key>
+			<false/>
+>>>>>>> weird
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
