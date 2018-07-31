@@ -43,10 +43,13 @@ class ChatViewController: JSQMessagesViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 // print(secondUser)
         // Do any additional setup after loading the view.
+        
         setupJSQMessagesViewController()
         tryObservingMessages()
     }
@@ -56,7 +59,12 @@ class ChatViewController: JSQMessagesViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
         print("view will appear")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
 
     override func didReceiveMemoryWarning() {
