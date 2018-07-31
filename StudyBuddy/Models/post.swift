@@ -52,7 +52,7 @@ class Post {
             let userName = dict["username"] as? String
             else {return nil}
         
-       
+       self.postID = snapshot.key
         self.subject = subject
         self.classNum = classNum
         self.duration = duration

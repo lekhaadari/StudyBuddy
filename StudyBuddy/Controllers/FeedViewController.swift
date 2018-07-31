@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class FeedViewController: UIViewController {
 
@@ -62,6 +63,7 @@ class FeedViewController: UIViewController {
 //            print(allPosts)
 //        }
         // call show post
+//        tableView.reloadData()
     }
 
     
@@ -122,6 +124,34 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         return posts.count
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+//            let postToDelete = notes[indexPath.row]
+//            CoreDataHelper.delete(note: noteToDelete)
+            
+//            notes = CoreDataHelper.retrieveNotes()
+            let postToDelete = posts[indexPath.row]
+            let user = User.current
+            if postToDelete.userName == user.username {
+                let postRef = Database.database().reference().child("posts").child(postToDelete.postID!)
+                postRef.removeValue() { (error, postToDelete) in
+                if error != nil {
+                    print(error)
+                    return
+                }
+                print("Posts Deleted")
+            }
+//            postRef.remove(at: indexPath.row)
+//            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            posts.remove(at: indexPath.row)
+//            tableView.reloadData()
+        }
+            else {
+                print("cant delete other's posts")
+            }
+    }
+    }
+    
 //    guard let selectedUser = selectedUser else { return }
 //
 //    // 2
@@ -152,6 +182,7 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         
     }
 }
+
 
 
 
