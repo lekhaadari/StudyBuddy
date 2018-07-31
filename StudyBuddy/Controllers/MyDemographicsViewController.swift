@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MyDemographicsViewController : UIViewController {
+class MyDemographicsViewController : UIViewController, UITextFieldDelegate {
     @IBOutlet weak var subjectTextField: UITextField!
     @IBOutlet weak var classTextField: UITextField!
     @IBOutlet weak var durationTextField: UITextField!
@@ -23,10 +23,32 @@ class MyDemographicsViewController : UIViewController {
 //
 //       }
         
+        
+        
         PostService.show { (allPosts) in
             print(allPosts)
         }
+
+        subjectTextField.delegate = self
+        classTextField.delegate = self
+        durationTextField.delegate = self
     }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
+    /**
+     * Called when the user click on the view (outside the UITextField).
+     */
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toFeedFromDone" {
