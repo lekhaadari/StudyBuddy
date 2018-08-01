@@ -42,7 +42,7 @@ struct PostService {
                 guard let post = Post(snapshot: dbPost as! DataSnapshot)  else {
                     return assertionFailure("Failed to get posts from Firebase")
                 }
-    //            posts.append(post!)
+    //            posts.append(post)
                 posts.insert(post, at: 0)
             }
             completion(posts)

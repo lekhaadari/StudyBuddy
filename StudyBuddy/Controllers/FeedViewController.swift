@@ -21,6 +21,9 @@ class FeedViewController: UIViewController {
         }
     }
     
+    var postsHandle: DatabaseHandle = 0
+    var postsRef: DatabaseReference?
+    
     // MARK: - IBOutlets
     
     @IBOutlet weak var tableView: UITableView!
@@ -47,6 +50,22 @@ class FeedViewController: UIViewController {
             print(self.posts.count)
             print("Posts from FeedViewController: \(self.posts)")
         }
+//        tableView.tableFooterView = UIView()
+        postsHandle = UserService.observePosts { [weak self] (ref, posts) in
+            self?.postsRef = ref
+//            self?.posts = posts
+            var tempPost = [Post]()
+            for post in posts {
+                tempPost.insert(post, at: 0)
+            }
+            self?.posts = tempPost
+
+            // 3
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -144,12 +163,12 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
 //            postRef.remove(at: indexPath.row)
 //            self.tableView.deleteRows(at: [indexPath], with: .automatic)
             posts.remove(at: indexPath.row)
-//            tableView.reloadData()
+            tableView.reloadData()
         }
             else {
                 print("cant delete other's posts")
             }
-    }
+        }
     }
     
 //    guard let selectedUser = selectedUser else { return }

@@ -52,7 +52,51 @@ struct UserService {
             completion(ref, chats)
         })
     }
-//    static func addPost(postID: String, completion: @escaping ()->Void){
-//        
+
+//    static func observePosts( withCompletion completion: @escaping (Post)-> Void){
+//
+//        let postRef = Database.database().reference().child("posts")
+//
+//        postRef.observe(.childAdded) { (snapshot) in
+//            let post = Post(snapshot: snapshot)
+//            completion(post!)
+//        }
 //    }
+    
+    static func observePosts( withCompletion completion: @escaping (DatabaseReference, [Post]) ->Void) -> DatabaseHandle {
+        let postRef = Database.database().reference().child("posts")
+        
+        return postRef.observe(.value, with: { (snapshot) in
+            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
+                return completion(postRef, [])
+            }
+            let posts = snapshot.flatMap(Post.init)
+            completion(postRef, posts)
+        })
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
