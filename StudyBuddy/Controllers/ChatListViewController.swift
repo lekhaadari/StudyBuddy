@@ -28,7 +28,11 @@ class ChatListViewController: UIViewController {
         tableView.tableFooterView = UIView()
         userChatsHandle = UserService.observeChats { [weak self] (ref, chats) in
             self?.userChatsRef = ref
-            self?.chats = chats
+            var tempChat = [Chat]()
+            for chat in chats {
+                tempChat.insert(chat, at: 0)
+            }
+            self?.chats = tempChat
             
             // 3
             DispatchQueue.main.async {
