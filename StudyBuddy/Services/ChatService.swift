@@ -45,11 +45,11 @@ struct ChatService {
         }
         
         // 7
-        let messagesRef = Database.database().reference().child("messages").child(chatRef.key).childByAutoId()
+        let messagesRef = Database.database().reference().child("messagess").child(chatRef.key).childByAutoId()
         let messageKey = messagesRef.key
         
         // 8
-        multiUpdateValue["messages/\(chatRef.key)/\(messageKey)"] = message.dictValue
+        multiUpdateValue["messagess/\(chatRef.key)/\(messageKey)"] = message.dictValue
         
         // 9
         let rootRef = Database.database().reference()
@@ -98,9 +98,9 @@ struct ChatService {
             multiUpdateValue["chats/\(uid)/\(chatKey)/lastMessageSent"] = message.timestamp.timeIntervalSince1970
         }
         
-        let messagesRef = Database.database().reference().child("messages").child(chatKey).childByAutoId()
+        let messagesRef = Database.database().reference().child("messagess").child(chatKey).childByAutoId()
         let messageKey = messagesRef.key
-        multiUpdateValue["messages/\(chatKey)/\(messageKey)"] = message.dictValue
+        multiUpdateValue["messagess/\(chatKey)/\(messageKey)"] = message.dictValue
         
         let rootRef = Database.database().reference()
         rootRef.updateChildValues(multiUpdateValue, withCompletionBlock: { (error, ref) in
@@ -115,7 +115,7 @@ struct ChatService {
     }
     
     static func observeMessages(forChatKey chatKey: String, completion: @escaping (DatabaseReference, Message?) -> Void) -> DatabaseHandle {
-        let messagesRef = Database.database().reference().child("messages").child(chatKey)
+        let messagesRef = Database.database().reference().child("messagess").child(chatKey)
         
         return messagesRef.observe(.childAdded, with: { snapshot in
             guard let message = Message(snapshot: snapshot) else {
