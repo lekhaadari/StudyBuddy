@@ -23,7 +23,7 @@ class ChatListViewController: UIViewController {
         super.viewDidLoad()
         
 //        // Do any additional setup after loading the view.
-        tableView.rowHeight = 71
+//        tableView.rowHeight = 71
 //        // remove separators for empty cells
         tableView.tableFooterView = UIView()
         userChatsHandle = UserService.observeChats { [weak self] (ref, chats) in
@@ -35,6 +35,7 @@ class ChatListViewController: UIViewController {
             self?.chats = tempChat
             
             // 3
+            self?.tableView.rowHeight = 125
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }

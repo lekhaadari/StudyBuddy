@@ -14,7 +14,7 @@ class FeedTableViewCell: UITableViewCell {
  //   @IBOutlet weak var usernameButton: UIButton!
     //    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var subjectLabel: UILabel!
+//    @IBOutlet weak var subjectLabel: UILabel!
     @IBOutlet weak var classNumLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     

@@ -15,7 +15,7 @@ struct PostService {
     static func create(for post: Post, completion: @escaping (Post?)-> Void) {
     let postRef = Database.database().reference().child("posts").childByAutoId()
     
-        let postAttr = ["subject": post.subject, "classNum": post.classNum, "duration": post.duration, "userID": User.current.uid , "username": User.current.username] as [String : Any]
+        let postAttr = ["classNum": post.classNum, "duration": post.duration, "userID": User.current.uid , "username": User.current.username] as [String : Any]
    
     postRef.setValue(postAttr) { (error, ref) in
         if let error = error {

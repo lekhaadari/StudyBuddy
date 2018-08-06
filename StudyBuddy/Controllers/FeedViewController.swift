@@ -61,6 +61,7 @@ class FeedViewController: UIViewController {
             self?.posts = tempPost
 
             // 3
+            self?.tableView.rowHeight = 125
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }
@@ -114,7 +115,7 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
             }
            
             cell.usernameLabel.text = post.userName
-            cell.subjectLabel.text = post.subject
+  //          cell.subjectLabel.text = post.subject
             cell.classNumLabel.text = post.classNum
             cell.durationLabel.text = post.duration
             //        // 3

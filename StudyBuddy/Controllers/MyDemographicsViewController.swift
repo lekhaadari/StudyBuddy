@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class MyDemographicsViewController : UIViewController, UITextFieldDelegate {
-    @IBOutlet weak var subjectTextField: UITextField!
+//    @IBOutlet weak var subjectTextField: UITextField!
     @IBOutlet weak var classTextField: UITextField!
     @IBOutlet weak var durationTextField: UITextField!
    
@@ -29,7 +29,7 @@ class MyDemographicsViewController : UIViewController, UITextFieldDelegate {
             print(allPosts)
         }
 
-        subjectTextField.delegate = self
+  //      subjectTextField.delegate = self
         classTextField.delegate = self
         durationTextField.delegate = self
     }
@@ -67,14 +67,14 @@ class MyDemographicsViewController : UIViewController, UITextFieldDelegate {
     @IBAction func doneButtonTapped(_ sender: Any) {
         let user = User.current
 //        let post = Post(subject: subjectTextField.text!, classNum: classTextField.text!, duration: durationTextField.text!, userID: user.uid, userName: user.username)
-        let post = Post(subject: subjectTextField.text!, classNum: classTextField.text!, duration: durationTextField.text!, user: user)
+        let post = Post(classNum: classTextField.text!, duration: durationTextField.text!, user: user)
         
         PostService.create(for: post) { (completedPost) in
             print(completedPost)
             
         }
         
-        subjectTextField.text = ""
+//        subjectTextField.text = ""
         classTextField.text = ""
         durationTextField.text = ""
 //        self.performSegue(withIdentifier: "toFeedFromDone", sender: self)
