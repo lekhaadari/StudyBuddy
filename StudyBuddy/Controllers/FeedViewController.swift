@@ -108,12 +108,12 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
                 UserService.show(forUID: post.userID, completion: { (user) in
                     DispatchQueue.main.async {
                         //cell.usernameButton.titleLabel?.text = user?.username
-                        cell.usernameButton.setTitle(user?.username, for: .normal)
+                        //cell.usernameButton.setTitle(user?.username, for: .normal)
                     }
                 })
             }
            
-    //        cell.usernameLabel.text = post.userID
+            cell.usernameLabel.text = post.userName
             cell.subjectLabel.text = post.subject
             cell.classNumLabel.text = post.classNum
             cell.durationLabel.text = post.duration

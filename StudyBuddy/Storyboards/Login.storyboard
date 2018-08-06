@@ -65,7 +65,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="q8m-9D-mbl" firstAttribute="top" secondItem="FnO-kD-epg" secondAttribute="top" id="3Bh-ck-kFn"/>
                             <constraint firstItem="FnO-kD-epg" firstAttribute="trailing" secondItem="sPy-ad-CXf" secondAttribute="trailing" constant="36" id="N0D-5D-QEr"/>
@@ -114,7 +114,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePE-TI-seG">
                                         <rect key="frame" x="0.0" y="166.5" width="345" height="120.5"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Done"/>
                                         <connections>
                                             <action selector="nextButtonPressed:" destination="1fd-9k-qJd" eventType="touchUpInside" id="q42-0I-Ke5"/>
                                         </connections>
@@ -127,7 +127,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="NYd-su-1wu" firstAttribute="trailing" secondItem="1Ff-cg-0aJ" secondAttribute="trailing" constant="15" id="AvL-RX-laJ"/>
                             <constraint firstItem="1Ff-cg-0aJ" firstAttribute="top" secondItem="NYd-su-1wu" secondAttribute="top" constant="60" id="ICA-kF-NRe"/>
