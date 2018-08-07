@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationUsageDescription</key>
-	<string>Location usage</string>
+	<string>Allows you to only view posts within a 3 mile radius.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Gets post location</string>
+	<string>App will not function without user&apos;s location.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

@@ -37,6 +37,10 @@ let locationManager = CLLocationManager()
         super.viewWillAppear(animated)
         locationManager.startUpdatingLocation()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        locationManager.stopUpdatingLocation()
+    }
     
 //    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 //        locations.last
@@ -73,11 +77,16 @@ let locationManager = CLLocationManager()
 //            self?.posts = posts
             var tempPost = [Post]()
             for post in posts {
+            if CLLocationManager.authorizationStatus() != .denied{
                 let postLocation = CLLocation.init(latitude: post.lat!, longitude: post.long!)
                 let distance = postLocation.distance(from: (self?.locationManager.location!)!)
                 print (distance)
                 if (distance < 2) {
                     tempPost.insert(post, at: 0)
+                }
+            }
+            else {
+                   tempPost.insert(post, at: 0)
                 }
             }
             

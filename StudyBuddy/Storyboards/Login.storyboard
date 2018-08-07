@@ -27,25 +27,25 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pMN-8z-b7k">
                                         <rect key="frame" x="10" y="25" width="355" height="255"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ma-9h-quK">
-                                                <rect key="frame" x="28.5" y="0.0" width="298" height="210"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-61" translatesAutoresizingMaskIntoConstraints="NO" id="6UW-c0-zVp">
+                                                <rect key="frame" x="62.5" y="0.0" width="230.5" height="144"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiW-JP-cDb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="117" height="210"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="80"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="University" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SY0-VR-uzU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="230.5" height="160.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="36"/>
                                                         <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Study Buddy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DA0-Pi-lNH">
-                                                        <rect key="frame" x="117" y="0.0" width="181" height="210"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="29"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="StudyBuddy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1g6-5A-5TV">
+                                                        <rect key="frame" x="0.0" y="99.5" width="230.5" height="44.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="37"/>
                                                         <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="~Study Smarter~" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXD-WE-s6J">
-                                                <rect key="frame" x="104" y="210" width="147.5" height="45"/>
+                                                <rect key="frame" x="104" y="144" width="147.5" height="111"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                 <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>

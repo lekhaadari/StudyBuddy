@@ -99,6 +99,7 @@ class MyDemographicsViewController : UIViewController, UITextFieldDelegate, CLLo
         let coordinate = locationManager.location?.coordinate
         locationManager.stopUpdatingLocation()
 //        let post = Post(subject: subjectTextField.text!, classNum: classTextField.text!, duration: durationTextField.text!, userID: user.uid, userName: user.username)
+        if CLLocationManager.authorizationStatus() != .denied {
         let post = Post(classNum: classTextField.text!, duration: durationTextField.text!, user: user, lat: (coordinate?.latitude)!, long: (coordinate?.longitude)!)
         
         PostService.create(for: post) { (completedPost) in
@@ -109,6 +110,7 @@ class MyDemographicsViewController : UIViewController, UITextFieldDelegate, CLLo
 //        subjectTextField.text = ""
         classTextField.text = ""
         durationTextField.text = ""
+        }
 //        self.performSegue(withIdentifier: "toFeedFromDone", sender: self)
         tabBarController?.selectedIndex = 1
         
