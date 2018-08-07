@@ -18,6 +18,11 @@ class CreateUsernameViewController : UIViewController {
     
     @IBAction func usernameCreated(_ sender: Any) {
     }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        usernameNextButton.layer.cornerRadius = 20
+        usernameNextButton.layer.masksToBounds = true
+    }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
 //        guard let firUser = Auth.auth().currentUser,
@@ -55,5 +60,6 @@ class CreateUsernameViewController : UIViewController {
                 self.view.window?.makeKeyAndVisible()
             }
         }
+        
     }
 }

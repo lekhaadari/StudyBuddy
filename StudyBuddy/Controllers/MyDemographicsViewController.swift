@@ -13,9 +13,20 @@ class MyDemographicsViewController : UIViewController, UITextFieldDelegate {
 //    @IBOutlet weak var subjectTextField: UITextField!
     @IBOutlet weak var classTextField: UITextField!
     @IBOutlet weak var durationTextField: UITextField!
-   
+    @IBOutlet weak var doneButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+            classTextField.layer.cornerRadius = 20
+            classTextField.layer.masksToBounds = true
+        
+        durationTextField.layer.cornerRadius = 20
+        durationTextField.layer.masksToBounds = true
+        
+        doneButton.layer.cornerRadius = 20
+        doneButton.layer.masksToBounds = true
+        
        
   //      let post = Post(subject: "Math", classNum: "101", duration: "2h", userID: "12345543etyf")
 //        PostService.create(for: post) { (completedPost) in

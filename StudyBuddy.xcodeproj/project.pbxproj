@@ -35,6 +35,7 @@
 		F090237221063B2600D45F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F090237121063B2600D45F2E /* Assets.xcassets */; };
 		F090237521063B2600D45F2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F090237321063B2600D45F2E /* LaunchScreen.storyboard */; };
 		F0F212922107917E007A0659 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0F212912107917E007A0659 /* GoogleService-Info.plist */; };
+		F0F9DBB12118F92D00A1F385 /* Screen Shot 2018-08-06 at 2.45.29 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F9DBB02118F92C00A1F385 /* Screen Shot 2018-08-06 at 2.45.29 PM.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		F090237621063B2600D45F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0B8D7852112742300B359E9 /* StudyBuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StudyBuddy.entitlements; sourceTree = "<group>"; };
 		F0F212912107917E007A0659 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F0F9DBB02118F92C00A1F385 /* Screen Shot 2018-08-06 at 2.45.29 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2018-08-06 at 2.45.29 PM.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 				F06C15C021079AAD00DE310E /* Helpers */,
 				F06C15C321079ACD00DE310E /* Storyboards */,
 				F090237121063B2600D45F2E /* Assets.xcassets */,
+				F0F9DBB02118F92C00A1F385 /* Screen Shot 2018-08-06 at 2.45.29 PM.png */,
 				F06C15BF21079AA300DE310E /* Extensions */,
 				F06C15C421079AD400DE310E /* Supporting */,
 				F090236E21063B2500D45F2E /* StudyBuddy.xcdatamodeld */,
@@ -288,6 +291,7 @@
 			files = (
 				F090237521063B2600D45F2E /* LaunchScreen.storyboard in Resources */,
 				F0F212922107917E007A0659 /* GoogleService-Info.plist in Resources */,
+				F0F9DBB12118F92D00A1F385 /* Screen Shot 2018-08-06 at 2.45.29 PM.png in Resources */,
 				F090237221063B2600D45F2E /* Assets.xcassets in Resources */,
 				F06C15C721079DD400DE310E /* Login.storyboard in Resources */,
 				F090236D21063B2500D45F2E /* Main.storyboard in Resources */,

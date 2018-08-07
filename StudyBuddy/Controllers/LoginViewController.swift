@@ -32,6 +32,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginButton.layer.cornerRadius = 20
+        loginButton.layer.masksToBounds = true
         
         // do any additional set-up after loading the view
     }

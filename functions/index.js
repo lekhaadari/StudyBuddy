@@ -48,6 +48,12 @@ exports.addMessage = functions.https.onRequest((req, res) => {
 // uppercase version of the message to /messages/:pushId/uppercase
 exports.makeUppercase = functions.database.ref('/messages/{pushId}/original')
     .onCreate((snapshot, context) => {
+
+
+
+     return new Promise(function(resolve, reject) {
+        
+    })
       // Grab the current value of what was written to the Realtime Database.
       const original = snapshot.val();
       console.log('Uppercasing', context.params.pushId, original);
