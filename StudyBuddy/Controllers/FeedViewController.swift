@@ -8,8 +8,11 @@
 
 import UIKit
 import Firebase
+import CoreLocation
 
-class FeedViewController: UIViewController {
+class FeedViewController: UIViewController, CLLocationManagerDelegate {
+    
+let locationManager = CLLocationManager()
 
     // MARK: - Properties
     var existingChat: Chat?
@@ -30,6 +33,15 @@ class FeedViewController: UIViewController {
     
     
     // MARK: View's Methods
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        locationManager.startUpdatingLocation()
+    }
+    
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        locations.last
+//    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +54,11 @@ class FeedViewController: UIViewController {
         
         // Check for UID, if UID == userdefaults UID
         // Don't show that user, or pop that user from the array of users
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        }
+        
         PostService.show { (allPosts) in
             print(allPosts?.count)
             print("All Posts From Firebase: \(allPosts)")
@@ -56,8 +73,15 @@ class FeedViewController: UIViewController {
 //            self?.posts = posts
             var tempPost = [Post]()
             for post in posts {
-                tempPost.insert(post, at: 0)
+                let postLocation = CLLocation.init(latitude: post.lat!, longitude: post.long!)
+                let distance = postLocation.distance(from: (self?.locationManager.location!)!)
+                print (distance)
+                if (distance < 2) {
+                    tempPost.insert(post, at: 0)
+                }
             }
+            
+            
             self?.posts = tempPost
 
             // 3
@@ -76,15 +100,15 @@ class FeedViewController: UIViewController {
 
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-//        PostService.show { (allPosts) in
-//            print(allPosts)
-//        }
-        // call show post
-//        tableView.reloadData()
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        
+////        PostService.show { (allPosts) in
+////            print(allPosts)
+////        }
+//        // call show post
+////        tableView.reloadData()
+//    }
 
     
 // // NEW - CHECK THIS - USERNAME BUTTON

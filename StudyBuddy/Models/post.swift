@@ -22,21 +22,27 @@ class Post {
     let userID: String
    let userName: String?
     var postID: String?
+    var lat: Double?
+    var long: Double?
     
     
-    init(classNum: String, duration: String, user: User) {
+    init(classNum: String, duration: String, user: User, lat: Double, long: Double) {
 //        self.subject = subject
         self.classNum = classNum
         self.duration = duration
        // self.user = user
         self.userID = user.uid
         self.userName = user.username
+        self.lat = lat
+        self.long = long
     }
     
     var dictValue: [String : Any] {
         return ["classNum" : classNum,
                 "duration" : duration,
-                "userID": userID
+                "userID": userID,
+                "lat": lat,
+                "long": long
                
         ]
     }
@@ -48,7 +54,9 @@ class Post {
             let duration = dict["duration"] as? String,
 //            let user = dict["user"] as? User,
             let userID = dict["userID"] as? String,
-            let userName = dict["username"] as? String
+            let userName = dict["username"] as? String,
+            let lat = dict["lat"] as? Double,
+            let long = dict["long"] as? Double
             else {return nil}
         
        self.postID = snapshot.key
@@ -58,6 +66,8 @@ class Post {
 //        self.user = user
         self.userID = userID
         self.userName = userName
+        self.lat = lat
+        self.long = long
         
     }
 }

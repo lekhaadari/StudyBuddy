@@ -8,12 +8,21 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
-class MyDemographicsViewController : UIViewController, UITextFieldDelegate {
+class MyDemographicsViewController : UIViewController, UITextFieldDelegate, CLLocationManagerDelegate {
+    
+    let locationManager = CLLocationManager()
+    
 //    @IBOutlet weak var subjectTextField: UITextField!
     @IBOutlet weak var classTextField: UITextField!
     @IBOutlet weak var durationTextField: UITextField!
     @IBOutlet weak var doneButton: UIButton!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        locationManager.startUpdatingLocation()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +35,16 @@ class MyDemographicsViewController : UIViewController, UITextFieldDelegate {
         
         doneButton.layer.cornerRadius = 20
         doneButton.layer.masksToBounds = true
+        
+        
+ //       self.locationManager.requestAlwaysAuthorization()
+        
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        }
         
        
   //      let post = Post(subject: "Math", classNum: "101", duration: "2h", userID: "12345543etyf")
@@ -77,8 +96,10 @@ class MyDemographicsViewController : UIViewController, UITextFieldDelegate {
 
     @IBAction func doneButtonTapped(_ sender: Any) {
         let user = User.current
+        let coordinate = locationManager.location?.coordinate
+        locationManager.stopUpdatingLocation()
 //        let post = Post(subject: subjectTextField.text!, classNum: classTextField.text!, duration: durationTextField.text!, userID: user.uid, userName: user.username)
-        let post = Post(classNum: classTextField.text!, duration: durationTextField.text!, user: user)
+        let post = Post(classNum: classTextField.text!, duration: durationTextField.text!, user: user, lat: (coordinate?.latitude)!, long: (coordinate?.longitude)!)
         
         PostService.create(for: post) { (completedPost) in
             print(completedPost)
