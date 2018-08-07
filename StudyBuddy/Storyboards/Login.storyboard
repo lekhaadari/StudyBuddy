@@ -50,7 +50,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.1960784314" green="0.0" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.36572128850000002" green="0.55574776790000002" blue="0.88235294119999996" alpha="0.83013314263802829" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="pMN-8z-b7k" secondAttribute="trailing" constant="10" id="4gq-BY-mw8"/>
                                     <constraint firstItem="pMN-8z-b7k" firstAttribute="leading" secondItem="q8m-9D-mbl" secondAttribute="leading" constant="10" id="gkW-sA-Dcs"/>
@@ -61,7 +61,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPy-ad-CXf">
                                 <rect key="frame" x="35" y="310" width="304" height="44"/>
-                                <color key="backgroundColor" red="0.1960784314" green="0.0" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.36572128850000002" green="0.55574776790000002" blue="0.88235294119999996" alpha="0.83844080108873242" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="00P-m6-npS"/>
                                 </constraints>
@@ -109,7 +109,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OK-Xp-saF">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="82.5"/>
                                         <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="20"/>
-                                        <color key="textColor" red="0.1960784314" green="0.0" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.36572128850000002" green="0.55574776790000002" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YQu-yL-jgi">
@@ -123,7 +123,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePE-TI-seG">
                                         <rect key="frame" x="0.0" y="204.5" width="345" height="82.5"/>
-                                        <color key="backgroundColor" red="0.1960784314" green="0.0" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.36572128850000002" green="0.55574776790000002" blue="0.88235294119999996" alpha="0.73894146130000005" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="20"/>
                                         <state key="normal" title="Done">
                                             <color key="titleColor" red="0.94117647059999998" green="0.94117647059999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>

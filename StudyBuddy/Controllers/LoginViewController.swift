@@ -61,7 +61,8 @@ class LoginViewController: UIViewController {
 extension LoginViewController: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
         if let error = error {
-            assertionFailure("Error signing in: \(error.localizedDescription)")
+//            assertionFailure("Error signing in: \(error.localizedDescription)")
+ //           print("Receive error: \(error.localizedDescription). Returning to first screen")
             return
         }
 
