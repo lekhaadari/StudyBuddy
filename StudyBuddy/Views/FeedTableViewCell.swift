@@ -10,8 +10,13 @@ import UIKit
 
 class FeedTableViewCell: UITableViewCell {
     
+    var didTapOptionsButtonForCell: ((FeedTableViewCell) -> Void)?
     
- //   @IBOutlet weak var usernameButton: UIButton!
+    
+    @IBAction func optionsButtonTapped(_ sender: Any) {
+        didTapOptionsButtonForCell?(self)
+    }
+    //   @IBOutlet weak var usernameButton: UIButton!
     //    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
 //    @IBOutlet weak var subjectLabel: UILabel!

@@ -81,6 +81,14 @@
                                                         <constraint firstItem="bRg-9p-u31" firstAttribute="centerX" secondItem="tyM-pg-765" secondAttribute="centerX" id="TCx-NU-w5e"/>
                                                     </constraints>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpd-dY-5u2">
+                                                    <rect key="frame" x="23" y="48" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="..."/>
+                                                    <connections>
+                                                        <action selector="optionsButtonTapped:" destination="QBa-G3-Mwb" eventType="touchUpInside" id="vdS-pW-jNl"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="tyM-pg-765" firstAttribute="centerY" secondItem="jIE-n8-oeS" secondAttribute="centerY" id="gGi-CI-Plk"/>

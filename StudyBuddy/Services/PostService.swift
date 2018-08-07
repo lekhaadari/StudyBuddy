@@ -49,6 +49,32 @@ struct PostService {
         }
     }
     
+    static func flag(_ post: Post) {
+        // 1
+        guard let postKey = post.postID else { return }
+        
+        // 2
+        let flaggedPostRef = Database.database().reference().child("flaggedPosts").child(postKey)
+        
+        // 3
+        let flaggedDict = ["post": post.postID,
+                           "poster_uid": post.userID,
+                           "reporter_uid": User.current.uid]
+        
+        // 4
+        flaggedPostRef.updateChildValues(flaggedDict)
+        
+        // 5
+        let flagCountRef = flaggedPostRef.child("flag_count")
+        flagCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
+            let currentCount = mutableData.value as? Int ?? 0
+            
+            mutableData.value = currentCount + 1
+            
+            return TransactionResult.success(withValue: mutableData)
+        })
+    }
+    
 
 }
 

@@ -13,6 +13,37 @@ import CoreLocation
 class FeedViewController: UIViewController, CLLocationManagerDelegate {
     
 let locationManager = CLLocationManager()
+    func handleOptionsButtonTap(from cell: FeedTableViewCell) {
+        // 1
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        
+        // 2
+        let post = posts[indexPath.section]
+        let postID = post.userID
+        
+        // 3
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        // 4
+        if postID != User.current.uid {
+            let flagAction = UIAlertAction(title: "Report as Inappropriate", style: .default) { _ in
+                PostService.flag(post)
+                
+                let okAlert = UIAlertController(title: nil, message: "The post has been flagged.", preferredStyle: .alert)
+                okAlert.addAction(UIAlertAction(title: "Ok", style: .default))
+                self.present(okAlert, animated: true)
+            }
+            
+            alertController.addAction(flagAction)
+        }
+        
+        // 5
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        // 6
+        present(alertController, animated: true, completion: nil)
+    }
 
     // MARK: - Properties
     var existingChat: Chat?
@@ -106,6 +137,7 @@ let locationManager = CLLocationManager()
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+   
 
     
     
@@ -151,6 +183,8 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
   //          cell.subjectLabel.text = post.subject
             cell.classNumLabel.text = post.classNum
             cell.durationLabel.text = post.duration
+            cell.didTapOptionsButtonForCell = handleOptionsButtonTap(from:)
+
             //        // 3
             //        cell.lastModificationTimeLabel.text = note.modificationTime?.convertToString() ?? "unknown"
     
