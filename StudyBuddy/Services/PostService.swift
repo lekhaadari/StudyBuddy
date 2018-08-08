@@ -38,7 +38,7 @@ struct PostService {
           var posts = [Post]()
             
             for dbPost in snapshot.children{
-                print(dbPost)
+  //              print(dbPost)
                 guard let post = Post(snapshot: dbPost as! DataSnapshot)  else {
                     return assertionFailure("Failed to get posts from Firebase")
                 }

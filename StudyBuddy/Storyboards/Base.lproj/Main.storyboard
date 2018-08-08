@@ -82,11 +82,14 @@
                                                     </constraints>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpd-dY-5u2">
-                                                    <rect key="frame" x="23" y="48" width="30" height="30"/>
+                                                    <rect key="frame" x="28" y="52" width="30" height="46"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="..."/>
+                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="28"/>
+                                                    <state key="normal" title="...">
+                                                        <color key="titleColor" red="0.36572128850000002" green="0.55574776790000002" blue="0.88235294119999996" alpha="0.73894146130000005" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                     <connections>
-                                                        <action selector="optionsButtonTapped:" destination="QBa-G3-Mwb" eventType="touchUpInside" id="vdS-pW-jNl"/>
+                                                        <action selector="optionButtonTapped:" destination="QBa-G3-Mwb" eventType="touchUpInside" id="FZL-8F-fYU"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -189,9 +192,9 @@
                                                     </constraints>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4A-hx-MWg">
-                                                    <rect key="frame" x="48" y="43" width="33" height="55"/>
+                                                    <rect key="frame" x="51" y="51" width="30" height="46"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
                                                     <state key="normal" title="...">
                                                         <color key="titleColor" red="0.36572128850000002" green="0.55574776790000002" blue="0.88235294119999996" alpha="0.73894146130000005" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -392,6 +395,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="g0E-dB-hT3"/>
+        <segue reference="ddg-3O-9VI"/>
     </inferredMetricsTieBreakers>
 </document>

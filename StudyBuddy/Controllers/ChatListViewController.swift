@@ -22,7 +22,7 @@ class ChatListViewController: UIViewController {
         guard let indexPath = tableView.indexPath(for: cell) else { return }
         
         // 2
-        let chat = chats[indexPath.section]
+        let chat = chats[indexPath.row]
         var chatter = ""
         if chat.memberUIDs.first == User.current.uid {
             chatter = chat.memberUIDs.last!

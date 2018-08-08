@@ -13,18 +13,22 @@ import CoreLocation
 class FeedViewController: UIViewController, CLLocationManagerDelegate {
     
 let locationManager = CLLocationManager()
-    func handleOptionsButtonTap(from cell: FeedTableViewCell) {
+    func handleOptionButtonTap(from cell: FeedTableViewCell) {
         // 1
         guard let indexPath = tableView.indexPath(for: cell) else { return }
+
         
         // 2
-        let post = posts[indexPath.section]
+        let post = posts[indexPath.row]
+    
+        
         let postID = post.userID
         
         // 3
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         // 4
+
         if postID != User.current.uid {
             let flagAction = UIAlertAction(title: "Report as Inappropriate", style: .default) { _ in
                 PostService.flag(post)
@@ -80,8 +84,7 @@ let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(posts.count)
-        print("Posts from FeedViewController: \(posts)")
+//        print("Posts from FeedViewController: \(posts)")
         
 //        tableView.delegate = self
 //        tableView.dataSource = self 
@@ -95,12 +98,12 @@ let locationManager = CLLocationManager()
         }
         
         PostService.show { (allPosts) in
-            print(allPosts?.count)
-            print("All Posts From Firebase: \(allPosts)")
+ //           print(allPosts?.count)
+ //           print("All Posts From Firebase: \(allPosts)")
             
             self.posts = allPosts!
-            print(self.posts.count)
-            print("Posts from FeedViewController: \(self.posts)")
+ //           print(self.posts.count)
+ //           print("Posts from FeedViewController: \(self.posts)")
         }
 //        tableView.tableFooterView = UIView()
         postsHandle = UserService.observePosts { [weak self] (ref, posts) in
@@ -111,8 +114,8 @@ let locationManager = CLLocationManager()
             if CLLocationManager.authorizationStatus() != .denied{
                 let postLocation = CLLocation.init(latitude: post.lat!, longitude: post.long!)
                 let distance = postLocation.distance(from: (self?.locationManager.location!)!)
-                print (distance)
-                if (distance < 100) {
+  //              print (distance)
+                if (distance < 4000) {
                     tempPost.insert(post, at: 0)
                 }
             }
@@ -183,7 +186,7 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
   //          cell.subjectLabel.text = post.subject
             cell.classNumLabel.text = post.classNum
             cell.durationLabel.text = post.duration
-            cell.didTapOptionsButtonForCell = handleOptionsButtonTap(from:)
+            cell.didTapOptionButtonForCell = handleOptionButtonTap(from:)
 
             //        // 3
             //        cell.lastModificationTimeLabel.text = note.modificationTime?.convertToString() ?? "unknown"
@@ -223,10 +226,10 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
                 let postRef = Database.database().reference().child("posts").child(postToDelete.postID!)
                 postRef.removeValue() { (error, postToDelete) in
                 if error != nil {
-                    print(error)
+//                    print(error)
                     return
                 }
-                print("Posts Deleted")
+ //               print("Posts Deleted")
             }
 //            postRef.remove(at: indexPath.row)
 //            self.tableView.deleteRows(at: [indexPath], with: .automatic)
@@ -234,7 +237,7 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.reloadData()
         }
             else {
-                print("cant delete other's posts")
+//                print("cant delete other's posts")
             }
         }
     }

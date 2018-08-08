@@ -60,7 +60,7 @@ class ChatViewController: JSQMessagesViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = true
-        print("view will appear")
+//        print("view will appear")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
