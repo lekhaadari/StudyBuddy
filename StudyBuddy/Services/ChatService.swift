@@ -114,6 +114,8 @@ struct ChatService {
         })
     }
     
+    
+    
     static func observeMessages(forChatKey chatKey: String, completion: @escaping (DatabaseReference, Message?) -> Void) -> DatabaseHandle {
         let messagesRef = Database.database().reference().child("messagess").child(chatKey)
         
