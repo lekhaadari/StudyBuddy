@@ -21,7 +21,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8m-9D-mbl">
                                 <rect key="frame" x="0.0" y="20" width="375" height="300"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2018-08-06 at 2.45.29 PM" translatesAutoresizingMaskIntoConstraints="NO" id="a1c-M4-NRS">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2018-08-08 at 1.19.34 PM" translatesAutoresizingMaskIntoConstraints="NO" id="a1c-M4-NRS">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pMN-8z-b7k">
@@ -184,6 +184,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Screen Shot 2018-08-06 at 2.45.29 PM" width="1340" height="740"/>
+        <image name="Screen Shot 2018-08-08 at 1.19.34 PM" width="1286" height="730"/>
     </resources>
 </document>
