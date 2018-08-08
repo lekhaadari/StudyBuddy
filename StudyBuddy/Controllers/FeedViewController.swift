@@ -112,7 +112,7 @@ let locationManager = CLLocationManager()
                 let postLocation = CLLocation.init(latitude: post.lat!, longitude: post.long!)
                 let distance = postLocation.distance(from: (self?.locationManager.location!)!)
                 print (distance)
-                if (distance < 2) {
+                if (distance < 100) {
                     tempPost.insert(post, at: 0)
                 }
             }

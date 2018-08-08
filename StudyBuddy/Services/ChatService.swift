@@ -114,6 +114,38 @@ struct ChatService {
         })
     }
     
+    static func flag(_ chat: Chat) {
+        // 1
+        guard let chatKey = chat.key else { return }
+        
+        // 2
+        let flaggedChatRef = Database.database().reference().child("flaggedChats").child(chatKey)
+        
+        // 3
+        var chatterUID = ""
+        if chat.memberUIDs.first == User.current.uid {
+            chatterUID = chat.memberUIDs.last!
+        }
+        else {
+            chatterUID = chat.memberUIDs.first!
+        }
+        let flaggedDict = ["chatID": chat.key,
+                           "chatter_uid": chatterUID,
+                           "reporter_uid": User.current.uid]
+        
+        // 4
+        flaggedChatRef.updateChildValues(flaggedDict)
+        
+        // 5
+        let flagCountRef = flaggedChatRef.child("flag_count")
+        flagCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
+            let currentCount = mutableData.value as? Int ?? 0
+            
+            mutableData.value = currentCount + 1
+            
+            return TransactionResult.success(withValue: mutableData)
+        })
+    }
     
     
     static func observeMessages(forChatKey chatKey: String, completion: @escaping (DatabaseReference, Message?) -> Void) -> DatabaseHandle {

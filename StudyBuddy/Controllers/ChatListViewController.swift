@@ -17,6 +17,44 @@ class ChatListViewController: UIViewController {
     var userChatsRef: DatabaseReference?
 //
     @IBOutlet weak var tableView: UITableView!
+    
+    func handleOptionsButtonTap(from cell: ChatListCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        
+        // 2
+        let chat = chats[indexPath.section]
+        var chatter = ""
+        if chat.memberUIDs.first == User.current.uid {
+            chatter = chat.memberUIDs.last!
+        }
+        else {
+            chatter = chat.memberUIDs.first!
+        }
+        
+        // 3
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        // 4
+        if chatter != User.current.uid {
+            let flagAction = UIAlertAction(title: "Report as Inappropriate", style: .default) { _ in
+                ChatService.flag(chat)
+                
+                let okAlert = UIAlertController(title: nil, message: "The chat has been flagged.", preferredStyle: .alert)
+                okAlert.addAction(UIAlertAction(title: "Ok", style: .default))
+                self.present(okAlert, animated: true)
+            }
+            
+            alertController.addAction(flagAction)
+        }
+        
+        // 5
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        // 6
+        present(alertController, animated: true, completion: nil)
+        // implement logic here
+    }
 //    
 //    
     override func viewDidLoad() {
@@ -79,6 +117,7 @@ extension ChatListViewController: UITableViewDataSource{
         let chat = chats[indexPath.row]
         cell.titleLabel.text = chat.title
         cell.lastMessageLabel.text = chat.lastMessage
+        cell.didTapOptionsButtonForCell = handleOptionsButtonTap(from:)
 //
       return cell
     

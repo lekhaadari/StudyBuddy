@@ -10,10 +10,14 @@ import UIKit
 
 class ChatListCell: UITableViewCell {
 
-
+    @IBAction func optionsButtonTapped(_ sender: UIButton) {
+        didTapOptionsButtonForCell?(self)
+    }
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var lastMessageLabel: UILabel!
     
+    var didTapOptionsButtonForCell: ((ChatListCell) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
